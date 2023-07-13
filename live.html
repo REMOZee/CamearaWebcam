@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Frame </title>
+<style>
+body {
+    background-color: pink;
+  }
+.video-frame-pattern {
+  width: 320px;
+  height: 240px;
+}
+.video-frame-pattern .left {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+.video-frame-pattern .right {
+  position: absolute;
+  bottom: 20%;
+  right: 20%;
+}
+button {
+  width: 80px;
+  height: 40px;
+  color: blue;
+  }
+.video-frame-pattern .pattern {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 50%;
+  height: 60%;
+  background-color: black;
+  border: 2px solid white;
+
+}
+</style>
+</head>
+<body>
+<button onclick="history.back()">Back</button>
+
+<div class="video-frame-pattern">
+  <video id="camera" autoplay></video>
+  <button id="capture" class="left">Capture</button>
+  <button id="record" class="right">Record</button>
+  <div class="pattern"></div>
+</div>
+<script>
+var camera = document.getElementById("camera");
+var captureButton = document.getElementById("capture");
+var recordButton = document.getElementById("record");
+
+captureButton.onclick = function() {
+  var snapshot = camera.capture();
+  document.body.appendChild(snapshot);
+};
+
+recordButton.onclick = function() {
+  var video = document.createElement("video");
+  video.src = camera.src;
+  document.body.appendChild(video);
+};
+</script>
+</body>
+</html>
