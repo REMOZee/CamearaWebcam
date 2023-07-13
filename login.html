@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log In | Camera Webcam</title>
+  <style>
+    h1 {
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+    }
+    p {
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+    }
+    input {
+      width: 200px;
+      height: 30px;
+    }
+    button {
+      width: 80px;
+      height: 40px;
+      color: blue;
+    }
+    body {
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  
+  <button onclick="history.back()">Back</button>
+<center>
+  <h1>Camera</h1>
+  <p>Please enter your password.</p>
+</center>
+<center>
+  <form action="login.php" method="post">
+    <input type="password" name="password" placeholder="Enter your password">
+      <button type="button" onclick="window.location.href='livecamera.html'">Login</button>
+  </form>
+</center>
+</body>
+
+</html>
